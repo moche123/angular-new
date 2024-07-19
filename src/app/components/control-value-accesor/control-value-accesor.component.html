@@ -1,0 +1,7 @@
+<button
+  *ngFor="let element of ratingArr(); index as i"
+  (click)="onSelect(i + 1)"
+>
+  <span>{{ showIcon(i) }}</span>
+</button>
+{{ name() }}

@@ -9,13 +9,20 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('./components/home/home.component').then((c) => c.HomeComponent),
+      import('./pages/home/home.component').then((c) => c.HomeComponent),
   },
   {
-    path: 'about',
+    path: 'composition-directive',
     loadComponent: () =>
-      import('./components/about/about.component').then(
-        (c) => c.AboutComponent
+      import(
+        './pages/composition-directive/composition-directive.component'
+      ).then((c) => c.CompositionDirectiveComponent),
+  },
+  {
+    path: 'inheritance',
+    loadComponent: () =>
+      import('./pages/inheritance/inheritance.component').then(
+        (c) => c.InheritanceComponent
       ),
   },
 ];

@@ -1,0 +1,16 @@
+:host {
+  display: inline-flex;
+  padding: 7px 13px;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid 2px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-radius 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,13 @@
+<app-content-projection></app-content-projection>
+<h2>Control value accesor</h2>
+<div [formGroup]="homeForm">
+  <app-control-value-accesor
+    formControlName="rating"
+  ></app-control-value-accesor>
+  <hr />
+  <pre>{{ homeForm.value.name }}</pre>
+  <pre>{{ homeForm.value.rating }}</pre>
+  <span class="error" *ngIf="homeForm.controls['rating'].hasError('min')"
+    >La calificación mínima es 3</span
+  >
+</div>
